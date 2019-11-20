@@ -23,7 +23,7 @@ Then you can start the app buy running <br/>
 * Session data can only be changed from server-side
 * No sesitive information stored on session data
 ### Checkout Page
-* SCA required in Netherlands so [ Payment Intent API](https://stripe.com/docs/payments/payment-intents "payment intent api") is chosen
+* SCA required in Netherlands so i choose [ Payment Intent API](https://stripe.com/docs/payments/payment-intents "payment intent api")
 * First it request backend to create intent and gets client secret for completing SCA steps in client
 ### Web Hooks
 * Listents Stripe events from /stripe-webhook endpoint
@@ -31,6 +31,7 @@ Then you can start the app buy running <br/>
 * In order to setup a webhook without proper https endpoint i configured a stripe cli command that can be reached from `app.json` file in scripts section
 ### Overall
 Here is a quick overlook for the arcitecture
+<br/>
 ![How It Works](diagrams/HowItWorks.png)
 
 ## How i approach this problem
@@ -44,7 +45,7 @@ Lastly i also need to listen events for verifying payments . But because trustin
 
 ## Why i choose Node.js Express
 
-Think of it like , you are the manager of a McDonalds . You want to hire english speaking people for both client-facing role like cashier and back-work role like cooker . But you want both of them to speak english in order to make their communication easier otherwise you need to teach them some common speaking language in order to communicate. So basically the reason why i used Node is because it is Javascript . I both use Javascript in client-side and server-side so that makes my work much easier and fast.
+Think of it like , you are the manager of a McDonalds . You want to hire english speaking people for both client-facing role like cashier and back-work role like cooker . But you want both of them to speak english in order to make their communication easier otherwise you need to teach them some common speaking language in order to communicate. So basically the reason why i used Node is because it is Javascript . I both use Javascript in client-side and server-side so that it makes my work much easier and fast.
 
 ## How to extend this project
 1) Extend security by using Radar and arranging some rules in order to manage the fraud risk and also for some rules for minimizing 3D secure steps.
