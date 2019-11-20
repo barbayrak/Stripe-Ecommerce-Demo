@@ -28,7 +28,7 @@ Then you can start the app buy running <br/>
 ### Web Hooks
 * Listents Stripe events from /stripe-webhook endpoint
 * I cannot trust client-side events for event listening
-* In order to setup a webhook without proper https endpoint i configured a stripe cli command that can be reached from `app.json` file in scripts section
+* In order to setup a webhook without proper https endpoint i configured a stripe cli command that can be reached from `package.json` file in scripts section
 ### Overall
 Here is a quick overlook for the arcitecture
 <br/>
