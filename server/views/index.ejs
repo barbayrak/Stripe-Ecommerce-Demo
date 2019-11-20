@@ -1,0 +1,29 @@
+<html>
+<head>
+    <% include partials/header %>
+</head>
+<body>
+<%- include('partials/navbar', {user: user,cartItemCount : cartItemCount}); %>
+
+<div class="container">
+    <h4>Items :</h4>
+    <ul id="item-list" class="list-group">
+
+        <% for( var i = 0 ; i < products.length; i++) { %>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <%= products[i].name %>
+                <a> Size : <%= products[i].size %> </a>
+                <div>
+                    <a> <%= (products[i].price / 100.0).toFixed(2); %> € </a>
+                    <a class="btn btn-success" href="/cart/add/<%= products[i].id %>"> Add to Cart </a>
+                </div>
+            </li>
+        <% } %>
+
+    </ul>
+</div>
+
+<% include partials/bootstrapScripts %>
+
+</body>
+</html>

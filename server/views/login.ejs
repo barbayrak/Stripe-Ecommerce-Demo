@@ -1,0 +1,38 @@
+<html>
+<head>
+    <% include partials/header %>
+</head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+<body>
+
+<div class="login-page">
+    <div class="form">
+        <form action="/register" method="post" class="register-form">
+            <input type="text" name="username" placeholder="Name"/>
+            <input type="password" name="password" placeholder="Password"/>
+            <input type="text" name="email" placeholder="Email"/>
+            <input type="text" name="address" placeholder="Address"/>
+            <input type="text" name="city" placeholder="City"/>
+            <input type="text" name="postalCode" placeholder="Postal Code"/>
+            <input type="text" name="country" placeholder="Country"/>
+            <button type="submit" value="Submit">Register</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form action="/login" method="post" class="login-form">
+            <input type="text" name="username" placeholder="Username"/>
+            <input type="password" name="password" placeholder="Password"/>
+            <button type="submit" value="Submit">login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+    </div>
+</div>
+
+<% include partials/bootstrapScripts %>
+
+<script type="text/javascript">
+    $('.message a').click(function () {
+        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+</script>
+</body>
+</html>
