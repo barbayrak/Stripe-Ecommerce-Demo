@@ -2,10 +2,15 @@
 
 ## How to setup
 
-First you  need to install node modules by running <br/>
+First you need to install Stripe CLI <br/>
+You can see how you can install it from this link<br/>
+[ Stripe CLI Install Guide](https://stripe.com/docs/stripe-cli "stripe cli install")
+<br/>
+
+Then you need to install node modules by running <br/>
 `npm install` <br/>
 <br/>
-Then you can start the app buy running <br/>
+Then you can start the app by running <br/>
 `npm run dev` <br/>
 
 ## How does it work ?

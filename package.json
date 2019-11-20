@@ -8,9 +8,8 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "dev": "node $NODE_DEBUG_OPTION server/server.js & npm run setup-webhook",
-    "setup-webhook": "stripe listen --api-key sk_test_2HZUazBrjwHpoOQMMejMHA7e00qUPHIJk1 --project-name=stripe-project-kaan --forward-to http://localhost:8000/stripe-webhook",
-    "postinstall": "brew install stripe/stripe-cli/stripe"
+    "dev": "node server/server.js & npm run setup-webhook",
+    "setup-webhook": "stripe listen --api-key sk_test_2HZUazBrjwHpoOQMMejMHA7e00qUPHIJk1 --project-name=stripe-project-kaan --forward-to http://localhost:8000/stripe-webhook"
   },
   "author": "Kaan Baris Bayrak",
   "license": "MIT",
