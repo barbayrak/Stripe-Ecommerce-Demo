@@ -89,7 +89,7 @@ function orderComplete(clientSecret,intentId) {
         {
             intentId: intentId,
         }, function( data ) {
-            var amount = data.amount;
+            var amount = (data.amount / 100.0).toFixed(2);
             var currency = data.currency;
             var chargeId = data.chargeId;
             var message =
